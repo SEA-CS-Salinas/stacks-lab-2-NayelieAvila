@@ -48,6 +48,17 @@ public class SyntaxCheckRunner
 {
 	public static void main ( String[] args )
 	{
-		//add test cases		
+		//add test cases	
+		String[] testCases = {
+			"(abc(*def)", "[{}]", "[", "[{<()>}]", "{html[value=4]*(12)>{$x}}", "[one]<two>{three}(four)", "car(cdr(a)(b)))", "car(cdr(a)(b))"
+
+		};
+
+		for (String test : testCases) {
+			SyntaxChecker checker = new SyntaxChecker(test);
+			out.println(checker);
+
+		}
+			
 	}
 }
